@@ -1,0 +1,19 @@
+﻿<rx:ReactiveUserControl
+    x:Class="RoutedNavigation.Views.HomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rx="http://reactiveui.net"
+    xmlns:vm="clr-namespace:RoutedNavigation.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:TypeArguments="vm:HomeViewModel"
+    mc:Ignorable="d">
+    <Grid Background="Violet">
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="Home Page" />
+    </Grid>
+</rx:ReactiveUserControl>

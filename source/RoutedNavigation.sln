@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutedNavigation", "RoutedNavigation\RoutedNavigation.csproj", "{BFB843EA-D8AC-4B37-880D-DC5033E3E501}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A88163EC-55CD-4FA6-9A9A-12C90380FB25}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFB843EA-D8AC-4B37-880D-DC5033E3E501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB843EA-D8AC-4B37-880D-DC5033E3E501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB843EA-D8AC-4B37-880D-DC5033E3E501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB843EA-D8AC-4B37-880D-DC5033E3E501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B812E89-2888-409D-B44D-9FA25DD4FCA9}
+	EndGlobalSection
+EndGlobal
