@@ -33,7 +33,7 @@ namespace RoutedNavigation
                 this.Bind(ViewModel, vm => vm.SelectedItem, v => v.Navigation.SelectedItem)
                     .DisposeWith(disposables);
 
-                // Bind the background, have to do this funky since it's an attached property
+                // Bind the back button, have to do this funky since it's an attached property
                 _ = this.WhenAnyValue(v => v.ViewModel.GoBack)
                     .Subscribe(command => TitleBar.SetBackButtonCommand(this, command))
                     .DisposeWith(disposables);

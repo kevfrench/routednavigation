@@ -19,7 +19,6 @@ namespace RoutedNavigation
 
         public App()
         {
-            //Locator.CurrentMutable.Register
             RegisterPage<HomeViewModel, HomeView>();
             RegisterPage<CollectionsViewModel, CollectionsView>();
             RegisterPage<NotesViewModel, NotesView>();

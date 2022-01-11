@@ -52,7 +52,7 @@ namespace RoutedNavigation.ViewModels
                 .Union(MenuItems.SelectMany(item => item.Children))
                 .ToList();
 
-            // Whenever the URL changes, set the appropriate viewmodel 
+            // Whenever the URL changes, set the appropriate page active 
             _ = this.WhenAnyValue(vm => vm.SelectedItem)
                 .WhereNotNull()
                 .Select(item => Locator.Current.GetService(item.ViewModel) as IRoutableViewModel)
