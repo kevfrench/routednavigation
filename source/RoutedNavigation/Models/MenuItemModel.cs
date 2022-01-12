@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using ModernWpf.Controls;
 
 namespace RoutedNavigation.Models
 {
@@ -10,6 +11,11 @@ namespace RoutedNavigation.Models
     public class MenuItemModel
     {
         public string Title { get; set; }
+
+        /// <summary>
+        /// PathIcon; acceptable to the ModernWpf NavigationView where I want an icon
+        /// </summary>
+        public PathIcon Icon { get; set; }
 
         public string Url { get; set; }
 

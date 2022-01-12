@@ -17,7 +17,7 @@
     <Window.Resources>
         <!--  Simple data template for navigation menu items  -->
         <DataTemplate x:Key="NavigationViewMenuItem">
-            <ui:NavigationViewItem Content="{Binding Title}" MenuItemsSource="{Binding Children}" />
+            <ui:NavigationViewItem Content="{Binding Title}" Icon="{Binding Icon}" MenuItemsSource="{Binding Children}" />
         </DataTemplate>
     </Window.Resources>
     <Grid>
