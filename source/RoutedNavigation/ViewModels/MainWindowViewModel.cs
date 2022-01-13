@@ -44,6 +44,7 @@ namespace RoutedNavigation.ViewModels
                 { 
                     Title = "Collections", 
                     Url = "collections",
+                    Selectable = false,
                     Icon = new PathIcon
                     {
                         Data = Geometry.Parse(
@@ -69,6 +70,7 @@ namespace RoutedNavigation.ViewModels
                         {
                             Title = "Mail",
                             Url = "mail",
+                            Selectable = false,
                             Icon = new PathIcon
                             {
                                 Data = Geometry.Parse(

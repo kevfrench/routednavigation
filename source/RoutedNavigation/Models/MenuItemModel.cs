@@ -17,6 +17,11 @@ namespace RoutedNavigation.Models
         /// </summary>
         public PathIcon Icon { get; set; }
 
+        /// <summary>
+        /// For Binding to SelectsOnInvoked, in the NavigationView
+        /// </summary>
+        public bool Selectable { get; set; } = true;
+
         public string Url { get; set; }
 
         public Type ViewModel { get; set; }
