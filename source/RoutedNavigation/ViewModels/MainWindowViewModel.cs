@@ -12,6 +12,9 @@ using ReactiveUI.Fody.Helpers;
 using Splat;
 
 using RoutedNavigation.Models;
+using MahApps.Metro.IconPacks;
+using System.Windows.Media;
+using ModernWpf.Controls;
 
 namespace RoutedNavigation.ViewModels
 {
@@ -20,14 +23,34 @@ namespace RoutedNavigation.ViewModels
     {
         public MainWindowViewModel()
         {
-            // Set up some menu items - if this was dynamic we'd use an ObservableCollection
+            // Set up some menu items
+            // - if this was dynamic we'd use an ObservableCollection
+            // - odd Icon construction so as to use my preferred icon pack (https://materialdesignicons.com/)
+            //   in my preferred (https://github.com/Kinnara/ModernWpf) NavigationView
             MenuItems = new List<MenuItemModel>
             {
-                new MenuItemModel { Title = "Home", Url = "home", ViewModel = typeof(HomeViewModel) },
+                new MenuItemModel
+                {
+                    Title = "Home",
+                    Icon = new PathIcon
+                    {
+                        Data = Geometry.Parse(
+                            new PackIconMaterial { Kind = PackIconMaterialKind.HomeOutline }.Data
+                        )
+                    },
+                    Url = "home",
+                    ViewModel = typeof(HomeViewModel) },
                 new MenuItemModel 
                 { 
                     Title = "Collections", 
-                    Url = "collections", 
+                    Url = "collections",
+                    Selectable = false,
+                    Icon = new PathIcon
+                    {
+                        Data = Geometry.Parse(
+                            new PackIconMaterial { Kind = PackIconMaterialKind.RhombusSplit }.Data
+                        )
+                    },
                     ViewModel = typeof(CollectionsViewModel),
                     Children = new List<MenuItemModel>
                     {
@@ -35,12 +58,25 @@ namespace RoutedNavigation.ViewModels
                         {
                             Title = "Notes",
                             Url = "notes",
+                            Icon = new PathIcon
+                            {
+                                Data = Geometry.Parse(
+                                    new PackIconMaterial { Kind = PackIconMaterialKind.NoteMultipleOutline }.Data
+                                )
+                            },
                             ViewModel= typeof(NotesViewModel)
                         },
                         new MenuItemModel
                         {
                             Title = "Mail",
                             Url = "mail",
+                            Selectable = false,
+                            Icon = new PathIcon
+                            {
+                                Data = Geometry.Parse(
+                                    new PackIconMaterial { Kind = PackIconMaterialKind.EmailOutline }.Data
+                                )
+                            },
                             ViewModel= typeof(MailViewModel)
                         },
                     }

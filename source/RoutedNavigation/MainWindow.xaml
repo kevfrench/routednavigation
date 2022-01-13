@@ -7,6 +7,7 @@
     xmlns:rx="http://reactiveui.net"
     xmlns:ui="http://schemas.modernwpf.com/2019"
     xmlns:vm="clr-namespace:RoutedNavigation.ViewModels"
+    xmlns:convert="clr-namespace:RoutedNavigation.Converters"
     Title="Routed Navigation Test"
     Width="800"
     Height="450"
@@ -17,7 +18,12 @@
     <Window.Resources>
         <!--  Simple data template for navigation menu items  -->
         <DataTemplate x:Key="NavigationViewMenuItem">
-            <ui:NavigationViewItem Content="{Binding Title}" MenuItemsSource="{Binding Children}" />
+            <ui:NavigationViewItem
+                Content="{Binding Title}"
+                Icon="{Binding Icon}"
+                MenuItemsSource="{Binding Children}"
+                SelectsOnInvoked="{Binding Selectable}"
+                FontWeight="{Binding Selectable, Converter={x:Static convert:FontConverters.FontWeight}}"/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
